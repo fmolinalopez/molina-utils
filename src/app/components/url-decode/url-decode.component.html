@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Paste your url here!</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="originStr"></textarea>
+  </div>
+
+  <div class="container text-center">
+    <br>
+    <button type="button" class="btn btn-primary" (click)="changeEncodeType()"><</button>
+    @if (encode) {
+      <button type="button" class="btn btn-primary" (click)="encodeString()">Encode</button>
+    }@else {
+      <button type="button" class="btn btn-primary" (click)="decodeString()">Decode</button>
+    }
+    <button type="button" class="btn btn-primary" (click)="changeEncodeType()">></button>
+    <br><br>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Result!</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{ resultStr }}</textarea>
+  </div>
+</div>
